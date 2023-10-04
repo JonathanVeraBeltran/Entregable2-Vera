@@ -1,0 +1,26 @@
+body{
+    background-color: blanchedalmond;
+}
+
+
+
+
+#pregunta {
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.opcion {
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: justify;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.resultado {
+    margin-top: 20px;
+}
