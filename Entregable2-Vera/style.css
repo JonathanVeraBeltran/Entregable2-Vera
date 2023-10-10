@@ -1,21 +1,23 @@
 body{
     background-color: blanchedalmond;
+    height: 600px;
 }
 
-
-
-
 #pregunta {
+    color: crimson;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 40px;
     margin-bottom: 10px;
     text-align: center;
     text-decoration: underline;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.opcion {
-    margin-bottom: 10px;
+#opciones {
+    font-size: 30px;
+    color: brown;
+    margin-top: 100px;
+    margin-left: 150px;
     cursor: pointer;
     text-align: justify;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -24,3 +26,16 @@ body{
 .resultado {
     margin-top: 20px;
 }
+
+.opcion{
+    margin-bottom: 30px;
+    border: 1px solid grey;
+}
+
+#resultado{
+    font-size: 30px;
+    color: brown;
+    margin-left: 100px;
+    
+}
+
