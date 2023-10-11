@@ -1,10 +1,5 @@
-preguntaCorrecta = [];
-PreguntaIncorrecta = [];
-
-localStorage.setItem('ContadorCorrectas', preguntaCorrecta);
-localStorage.setItem('ContadorIncorrectas', PreguntaIncorrecta);
-
-
+const preguntaCorrecta = [];
+const preguntaIncorrecta = [];
 
 const preguntas = [
     {
@@ -59,12 +54,14 @@ function mostrarPregunta() {
 function verificador(respuestaSeleccionada, respuestaCorrecta) {
     if (respuestaSeleccionada === respuestaCorrecta) {
         resultadoResultado.textContent = 'Correcto, muy bien!!!!';
-        preguntaCorrecta.push(1);
-
     } else {
         resultadoResultado.textContent = 'Incorrecto. La respuesta correcta es: ' + respuestaCorrecta;
-        PreguntaIncorrecta.push(1);
+    }
 
+    if(respuestaSeleccionada === respuestaCorrecta){
+        preguntaCorrecta.push(1);
+    } else {
+        preguntaIncorrecta.push(1);
     }
 
     setTimeout(() => {
@@ -75,17 +72,15 @@ function verificador(respuestaSeleccionada, respuestaCorrecta) {
         } else {
             preguntaPregunta.textContent = '¡Fin del juego!';
             opcionesOpciones.innerHTML = '';
+            console.log(preguntaCorrecta.length)
+            console.log(preguntaIncorrecta.length)
+            localStorage.setItem('ContadorCorrectas', preguntaCorrecta.length);
+            localStorage.setItem('ContadorIncorrectas', preguntaIncorrecta.length);
         }
     }, 1000);
 }
 
 mostrarPregunta();
-
-
-
-
-
-
 
 
 
